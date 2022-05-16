@@ -1,0 +1,169 @@
+@import "vars";
+
+.footer {
+  position: absolute;
+  &__MainContent {
+    background: $prymari;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    &_columns {
+      display: grid;
+      grid-template-columns: auto;
+      max-width: 80vw;
+      min-width: 80vw;
+      @media (max-width: $tablets) {
+        max-width: 90vw;
+        min-width: 90vw;
+      }
+      @media (max-width: $phone) {
+        //max-width: 100vw;
+      }
+    }
+    &_logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 2em;
+      button {
+        font-size: 30px;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      @media (max-width: $tablets) {
+        padding: 0;
+      }
+      img {
+        max-width: 150px;
+      }
+    }
+    &_Right {
+      display: flex;
+      justify-content: space-between;
+      margin: 1.5em 0;
+      @media (max-width: $tablets) {
+        display: block;
+        // flex-direction: column;
+      }
+      > :first-child {
+        flex-basis: 35%;
+        margin-bottom: 2em;
+        @media (min-width: $tablets) and (max-width: $laptops) {
+          flex-basis: 50%;
+        }
+        @media (max-width: $tablets) {
+          width: 100%;
+        }
+      }
+      > :last-child {
+        flex-basis: 65%;
+      }
+      p {
+        color: #fafafa;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18.48px;
+        padding: 0 30px 0 0;
+      }
+      span {
+        color: #fafafa;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18.48px;
+        padding: 0 30px 0 0;
+
+        @media (max-width: $tablets) {
+          padding: 1em 0.5em 2.5em;
+          text-align: justify;
+        }
+      }
+
+      &_Columns {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        &Item {
+          display: flex;
+          flex-direction: column;
+          align-content: flex-start;
+          flex-basis: 50%;
+          align-items: flex-end;
+          @media (max-width: $laptops) {
+            flex-basis: 50%;
+            padding: 0;
+            align-content: flex-start;
+            align-items: flex-start;
+          }
+          a {
+            color: #fafafa;
+            padding: 0 0 1em;
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+  &__SocialContent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    @media (max-width: $tablets) {
+      padding: 3em 0 0;
+    }
+
+    &_links {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @media (max-width: $phone) {
+        display: block;
+      }
+      p {
+        color: #fafafa;
+        font-weight: 500;
+        font-size: 14px;
+        margin: 0.5em 0;
+      }
+      a {
+        margin: 0 6px;
+        :first-child {
+          margin: 0 6px 0 0;
+        }
+      }
+    }
+    &_link {
+      margin-right: 0.5em;
+    }
+    &_li {
+      display: flex;
+      div {
+        max-width: 27px;
+        max-height: 27px;
+        min-height: 27px;
+        min-width: 27px;
+      }
+    }
+  }
+  &__Copyrights {
+    background: #222;
+    width: 100vw;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+    a {
+      color: $background;
+      font-weight: 800;
+      font-size: 14px;
+      margin-right: 0.3em;
+    }
+    p {
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}

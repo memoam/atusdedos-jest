@@ -1,0 +1,85 @@
+@import "vars";
+
+.container {
+  min-height: 100vh;
+  height: 100%;
+  background: $background;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 5em;
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 7em;
+  width: 90%;
+  margin: auto;
+  margin-right: 0;
+
+  &__logo{
+    display: flex;
+  }
+  &__text {
+    margin-left: 2em;
+    &_title {
+      font-size: 30px;
+      font-weight: 500;
+      color: $prymari;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+.courses{
+  margin-top: -25em;
+  margin-bottom: 5em;
+}
+.course {
+  display: flex;
+  width: 100%;
+ justify-content: center;
+  &__text {
+    &_title {
+      color: $prymari;
+      font-size: 20px;
+      font-weight: 600;
+      margin-right: 2em;
+      margin-top: 2em;
+      min-width: 350px;
+      text-align: right;
+    }
+  }
+  &__carts {
+    border-left: 1px solid $border;
+  }
+}
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  height: fit-content;
+  &__information {
+    display: flex;
+    align-items: center;
+    color: $prymari;
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid;
+    z-index: 1;
+    min-width: 600px;
+    cursor: pointer;
+    &:hover{
+      background: #fff;
+    }
+    p {
+      font-size: 50px;
+      font-weight: 500;
+    }
+  }
+}
