@@ -1,4 +1,4 @@
-# Next.js + Jes
+# Next.js + Jest
 ## Getting Started
 
 First, run the development server:
