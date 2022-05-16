@@ -20,7 +20,7 @@
   margin: auto;
   margin-right: 0;
 
-  &__logo{
+  &__logo {
     display: flex;
   }
   &__text {
@@ -33,14 +33,14 @@
     }
   }
 }
-.courses{
+.courses {
   margin-top: -25em;
   margin-bottom: 5em;
 }
 .course {
   display: flex;
   width: 100%;
- justify-content: center;
+  justify-content: center;
   &__text {
     &_title {
       color: $prymari;
@@ -74,12 +74,92 @@
     z-index: 1;
     min-width: 600px;
     cursor: pointer;
-    &:hover{
+    &:hover {
       background: #fff;
     }
     p {
       font-size: 50px;
       font-weight: 500;
     }
+  }
+}
+.alert {
+  &__error,
+  &__confirmation,
+  &__information,
+  &__warning {
+    padding: 0.3em;
+    width: fit-content;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+  }
+  &__warning {
+    background: #f6822b;
+  }
+  &__information {
+    background: #23b8b0;
+  }
+  &__confirmation {
+    background: #73b55f;
+  }
+  &__error {
+    background: #d72a2a;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    button {
+      font-size: 22px;
+      text-decoration: none;
+      margin-left: 1em;
+    }
+  }
+  &__img {
+    display: flex;
+    padding: 0.3em;
+    @media (max-width: 320px) {
+      display: none;
+    }
+  }
+  &__body {
+    color: white;
+    margin-left: 0.3em;
+    &_title {
+      font-weight: bold;
+      font-size: 0.8em;
+    }
+    &_txt {
+      font-size: 0.7em;
+    }
+  }
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  &__input50 {
+    width: calc(50% - 0.5em);
+    margin: 0.5em 0;
+  }
+  &__date {
+    &_day,
+    &_year {
+      width: 20%;
+    }
+    &_month {
+      width: calc(60% - 1em);
+    }
+  }
+  &__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em 0;
   }
 }

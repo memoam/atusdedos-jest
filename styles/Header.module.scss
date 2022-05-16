@@ -1,5 +1,5 @@
 @import "vars";
-.container{
+.container {
   display: flex;
   width: 100%;
   position: fixed;
@@ -8,20 +8,19 @@
   background: $background;
   border-bottom: 1px solid $border;
 }
-.topHeader{
+.topHeader {
   width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-
 }
 .logo,
-.menu{
+.menu {
   width: 50%;
 }
-.logo{
-  button{
+.logo {
+  button {
     background: none;
     padding: 0;
     font-size: 30px;
@@ -29,19 +28,50 @@
     text-decoration: none;
     font-weight: 600;
   }
-
 }
-.menu{
+.menu {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 1em 0;
   font-size: 24px;
   text-transform: uppercase;
-  button{
+  button {
     background: none;
     padding: 0;
     font-size: 24px;
     margin-left: 1em;
   }
+}
+.modal {
+  position: absolute;
+  border-radius: 10px;
+  padding: 1em;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  background: $backgrounditem;
+  width: fit-content;
+  max-width: 30%;
+  &__close {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    font-size: 2em;
+    text-decoration: none;
+  }
+  @media (max-width: $phone) {
+    width: 90%;
+  }
+}
+.notification{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  position: fixed;
+  top: 5em;
+  right: 1em;
+  z-index: 10;
 }

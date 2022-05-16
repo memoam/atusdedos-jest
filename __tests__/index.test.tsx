@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/react'
 import Home from '@/pages/index'
 
-it('renders homepage unchanged', () => {
-  const { container } = render(<Home />)
-  expect(container).toMatchSnapshot()
+beforeEach(() => { render(<Home />) })
+describe('Home', () => {
+  it('must display a title', () => {
+      expect(screen.queryByText(/AtusDedos/i)).toBeInTheDocument();
+  })
 })
