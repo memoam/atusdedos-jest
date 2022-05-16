@@ -13,3 +13,20 @@ export function password(user) {
 export function validateFormSingIN(user) {
     return (user.email !== '' && user.password !== '')
 }
+export function validateFormExam(data) {
+    let value = 0;
+    for (let i = 0; i < data.length; i += 1) {
+        if (data[i] !== '')
+            value += 1
+    }
+    return (value === 0 ? false : true)
+}
+export function evaluateExam(data) {
+    let value = 0;
+    const answer = ['a', 'b', 'c', 'd', 'a', 'b', 'c', 'd', 'a', 'b',];
+    for (let i = 0; i < data.length; i += 1) {
+        if (data[i] === answer[i])
+            value += 10
+    }
+    return (value)
+}

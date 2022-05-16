@@ -3,7 +3,7 @@ import styles from '../../styles/Home.module.scss';
 
 export default function Exam() {
     return (
-        <div className={styles.singIn}>
+        <div className={styles.exam}>
             hola
         </div>
     );

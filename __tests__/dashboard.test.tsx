@@ -1,21 +1,18 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import SingIn from '@/components/singIn'
+import Exam from '@/components/dashboard/exam'
 import {
-    validateEmail,
-    validateFormSingIN,
+    validateFormExam,
+    evaluateExam,
 } from '../services/validations/auth';
 
-const user = {
-    email: 'memoangeles180@gmail.com',
-    password: 'memomacias',
-};
+const data = ['a', '', '', '', '', '', '', '', '', '',];
 
-beforeEach(() => { render(<SingIn />) })
-describe('SingIn', () => {
-    it('email format validation -> true', () => {
-        expect(validateEmail(user.email)).toBe(true)
-    })
+beforeEach(() => { render(<Exam />) })
+describe('Exam', () => {
     it('form validation empy -> true', () => {
-        expect(validateFormSingIN(user)).toBe(true)
+        expect(validateFormExam(data)).toBe(true)
+    })
+    it('evaluate exam -> true', () => {
+        expect(evaluateExam(data)).toBe(10)
     })
 })
